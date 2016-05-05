@@ -1,0 +1,313 @@
+@mixin media($width) {
+ 	@media screen and (max-width: $width + "px") {
+ 		@content;
+ 	}
+}
+
+.process {
+	padding: 50px 0 580px;
+
+	.scroll-down-opaque {
+		top: 580px;
+		margin-bottom: 21px;
+
+		&:hover {
+			top: 583px;
+		}
+	}
+}
+
+.process-container {
+	margin: 57px auto 0;
+	max-width: 783px;
+	position: relative;
+}
+
+.process-step1 {
+	left: 0;
+	top: 97px;
+	width: 201px;
+	height: 201px;
+	border-radius: 50%;
+	border: 1px solid transparent;
+	position: absolute;
+	box-sizing: border-box;
+}
+
+.step1-rectangle1 {
+	left: calc(50% - 174px/2); 
+	top: calc(50% - 50px);
+	width: 174px;
+	height: 100.6px;
+	box-sizing: border-box;
+	position: absolute;
+	border-right: 4px solid rgba(252, 99, 94, 0.97);
+	border-left: 1px solid #adadad;
+	border-top: none;
+	border-bottom: none;
+}
+
+.step1-rectangle2,
+.step1-rectangle3 {
+	left: calc(50% - 174px/2); 
+	top: calc(50% - 50.22px);
+	width: 174.1px;
+	height: 100.44px;
+	position: absolute;
+	box-sizing: border-box;
+	border-top: none;
+	border-bottom: none;
+}
+
+.step1-rectangle2 {
+	transform: rotate(60deg);
+	border-left: 4px solid rgba(252, 99, 94, 0.97);
+	border-right: 1px solid #adadad; 
+}
+
+.step1-rectangle3 {
+	transform: rotate(120deg);
+	border-left: 4px solid rgba(252, 99, 94, 0.97); 
+	border-right: 1px solid #adadad;
+}
+
+.step-text {
+	margin: 30px auto 0;
+	margin-top: 30px;
+	width: 127px;
+}
+
+.step4-text {
+	margin: 60px auto 0;
+	width: 194px;
+}
+
+.step__title {
+	display: block;
+	font-size: 24px;
+	font-weight: 500;
+	line-height: 26px;
+	text-transform: uppercase;
+	color: #868686;
+
+	span {
+		color: #fc635e;
+	}
+}
+
+.step__underscore {
+    margin: 2px auto 13px;
+    width: 76px;
+    display: block;
+    border-bottom: 1px solid #adadad;
+}
+
+.step__description {
+	display: block;
+	color: #9f9f9f;
+	font-size: 15px;
+	font-weight: 300;
+	line-height: 17px;
+}
+
+.process-icon {
+	width: 38px;
+	height: 38px;
+	position: absolute;
+	background: #fc635e;
+	box-sizing: border-box;
+	border-radius: 50%;
+	border: 3px solid #fc635e;
+	transition: all 0.5s ease-in-out;
+	
+	.fa {
+		color: #fff;
+		position: absolute;
+		transition: all 0.5s ease-in-out;
+	}
+
+	&:hover {
+		background: #fff;
+
+		.fa {
+			color: #fc635e;
+			transition: all 0.5s ease-in-out;
+		}
+	}
+}
+
+.step1-icon {
+	left: -4px;
+	top: 31px;
+
+	.fa-lightbulb-o {
+		top: 5px;
+		left: 9px;
+		font-size: 1.6em;
+	}	
+}
+
+.step2-icon {
+	left: -4px;
+	top: 31px;
+
+	.fa-television {
+		top: 7px;
+		left: 5px;
+		font-size: 1.3em;
+	}
+
+	.fa-line-chart {
+		top: 10px;
+		left: 11px;
+		font-size: 0.5em;
+	}
+}
+
+.step3-icon {
+	left: -4px;
+	top: 31px;
+
+	.fa-cogs {
+		top: 7px;
+		left: 5px;
+		font-size: 1.2em;
+	}
+}
+
+.step4-icon1 {
+	left: 131px;
+	bottom: -13px;
+
+	.fa-rocket {
+		top: 5px;
+		left: 5px;
+		font-size: 1.4em;
+	}
+} 
+
+.step4-icon2 {
+	left: 1px;
+	top: 56px;
+
+	.fa-thumbs-up {
+		top: 4px;
+		left: 6px;
+		font-size: 1.4em;
+	}
+}
+
+.process-photo {
+	position: absolute;
+	top: 246px;
+	left: 55px;
+	display: block;
+	position: absolute;
+	z-index: -1;
+
+	&:after {
+		content: '';
+		top: 24px;
+		left: 123px;
+		width: 100.44px;
+		height: 0px;
+		position: absolute;
+		border: 2px solid #fc635e;
+		box-sizing: border-box;
+		transform: rotate(30deg);
+	}
+}
+
+.process-step2 {
+	@extend .process-step1;
+	left: 255px;
+	top: 144px;
+}
+
+.step2-rectangle1 {
+	@extend .step1-rectangle1;
+	border-left: 4px solid rgba(252, 99, 94, 0.97);
+	border-right: 1px solid #adadad;
+}
+
+.step2-rectangle2 {
+	@extend .step1-rectangle2;
+}
+
+.step2-rectangle3 {
+	@extend .step1-rectangle3;
+	border-left: 1px solid #adadad;
+}
+
+.process-step3 {
+	@extend .process-step1;
+	top: -6.5px;
+	left: 341px;
+}
+
+.step3-rectangle1 {
+	@extend .step1-rectangle1;
+	border-left: 4px solid rgba(252, 99, 94, 0.97);
+}
+
+.step3-rectangle2 {
+	@extend .step1-rectangle2;
+}
+
+.step3-rectangle3 {
+	@extend .step1-rectangle3;
+}
+
+.process-step4 {
+	@extend .process-step1;
+	left: 504px;
+	top: 68px;
+	width: 302px;
+	height: 302px;
+}
+
+.step4-rectangle1 {
+	@extend .step1-rectangle1;
+	left: calc(50% - 262px/2); 
+	top: calc(50% - 75.1px);
+	width: 262px;
+	height: 150.2px;
+}
+
+.step4-rectangle2 {
+	@extend .step1-rectangle2;
+	left: calc(50% - 261.3px/2); 
+	top: calc(50% - 151.4px/2);
+	width: 261.3px;
+	height: 151.4px;
+	border-right: 4px solid rgba(252, 99, 94, 0.97);
+}
+
+.step4-rectangle3 {
+	@extend .step1-rectangle3;
+	left: calc(50% - 261.3px/2); 
+	top: calc(50% - 151.4px/2);
+	width: 261.3px;
+	height: 151.4px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,72 @@
+@mixin media($width)
+{
+    @media screen and (max-width: $width + 'px')
+    {
+        @content;
+    }
+}
+
+.contact
+{
+    position: relative;
+}
+
+.contact-hexagon
+{
+    position: absolute;
+    top: 0;
+    left: calc(50% - 104px);
+
+    width: 209px;
+    height: 242px;
+
+    background-color: #fe8682;
+
+    -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+            clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    &:before
+    {
+        position: absolute;
+        top: 13px;
+        left: 10px;
+
+        width: 189px;
+        height: 216px;
+
+        content: '';
+        transition: all .5s ease-in-out;
+
+        background-color: #fc635e;
+
+        -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+                clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    }
+}
+
+.contact-hexagon__title
+{
+    font-size: 27px;
+    font-weight: 500;
+    line-height: 21px;
+
+    position: absolute;
+    top: 70px;
+    left: 70px;
+
+    color: #fff;
+}
+
+.contact-hexagon__description
+{
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 21px;
+
+    position: absolute;
+    top: 120px;
+    left: 24px;
+
+    width: 157px;
+
+    color: #fff;
+}

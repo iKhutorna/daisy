@@ -1,0 +1,142 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway:300,400,700,800);
+
+   
+@mixin media($width) {
+ 	@media screen and (max-width: $width + "px") {
+ 		@content;
+ 	}
+}
+
+body {
+	margin: 0;
+	text-align: center;
+	font-family: 'Raleway', sans-serif;
+}
+
+.section-container {
+	margin: 0 auto;
+	max-width: 940px;
+}
+
+.clearfix {
+	&:after {
+		content: '';
+		overflow: hidden;
+		display: table;
+		clear: both;
+	}
+}
+		
+.title {
+	border-bottom: 1px solid #adadad;
+	padding-bottom: 12px;
+	display: inline-block;
+	font-family: 'Raleway', sans-serif;
+	font-size: 28px;
+	font-weight: 500;
+	line-height: 26px;
+	text-transform: uppercase;
+	color: #868686;
+	
+	span {
+		color: #fc635e;
+	}
+}
+
+.description {
+	margin: 0 auto;
+	max-width: 505px;
+	margin-top: 19px;
+	color: #adadad;
+	font-family: 'Raleway', sans-serif; 
+	font-size: 20px;
+	font-weight: 300;
+	line-height: 26px;
+}
+
+.button {
+	display: inline-block;
+	width: 205px;
+	border: 2px solid #fc635e;
+	border-radius: 7px;
+	box-sizing: border-box;
+	transition: all 0.5s ease-in-out;
+	
+	&:hover {
+		background: #fc635e;
+	}
+
+	&:hover .button__title {
+		color: #fff;
+	}
+}
+
+.button__title {
+	line-height: 52px;
+	font-size: 24px;
+	font-weight: 300;
+	color: #fc635e;
+	transition: all 0.5s ease-in-out;
+}
+
+.scroll-down-transparent {
+	margin: 0 auto;
+	width: 28px;
+	height: 28px;
+	display: block;
+	position: relative;
+	border: 1px solid #fc635e;
+	border-radius: 50%;
+	background: #fc635e;
+	box-sizing: border-box;
+	
+	&:after {
+		position: absolute;
+		display: block;
+		left: 50%;
+		margin-left: -1px;
+		top: 5px;
+		bottom: 5px;
+		border: 1px solid #fff;
+		content:"";
+		color: #fff;
+	}
+
+	&:before {
+		position: absolute;
+		display: block;
+		left: 39%;
+		bottom: 5px;
+		margin-left: -1px;
+		width: 6px;
+		height: 6px;
+		border: 2px solid #fff;
+		border-top: none;
+		border-left: none;
+		content:"";
+		transform: rotate(45deg);
+	}
+
+	&:hover {
+		bottom: -3px;
+	}
+
+}
+
+.scroll-down-opaque {
+	@extend .scroll-down-transparent;
+	background: transparent;
+
+	&:before  {
+		border: 2px solid #fc635e;
+		border-top: none;
+		border-left: none;
+	}
+	
+	&:after {
+		border: 1px solid #fc635e;
+	} 
+}
+
+
+

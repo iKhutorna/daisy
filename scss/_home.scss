@@ -1,0 +1,135 @@
+@mixin media($width) {
+ 	@media screen and (max-width: $width + "px") {
+ 		@content;
+ 	}
+}
+
+.home {
+	padding-bottom: 28px;
+	background-image: url('../pic/home-background.png');
+	background-size: cover;
+	background-position: 50% 50%;
+}
+
+.home__header {
+	padding-top: 22px;
+	margin-bottom: 218px;
+}
+
+.home-header__logo {
+	float: left;
+}
+
+.home-header__menu {
+	padding-top: 25px;
+	float: right;
+}
+
+.home-header__menu-item {
+	position: relative;
+	color: #fff;
+	margin-left: 40px;
+	// padding-bottom: 7px;
+	font-size: 16px;
+	font-weight: 100;
+	text-transform: uppercase;
+	transition: color 0.3s ease-in-out;
+	
+	&:after {
+		left: 0;
+		width: 0;
+		top: 26px;
+		position: absolute;
+		content: "";
+		border-bottom: solid 4px #fc635e;
+	}	
+	
+	&:hover {
+		color: #fc635e;
+		
+		&:after {
+			width: 100%;
+			transition: width 0.3s ease-in-out;
+		}
+	}
+}
+
+.home__title {
+	position: relative;
+	font-size: 51px;
+	font-weight: 700;
+	line-height: 36px;
+	text-transform: uppercase;
+	color: #fff;
+	display: inline-block;
+	
+	span {
+		color: #fc635e;
+	}
+
+	&:after {
+		top: 14px;
+		right: calc(100% + 9px);
+		width: 107px;
+		height: 8px;
+		content: "";
+		position: absolute;
+		background: #fff;
+		opacity: 0.2;
+	}
+
+	&:before {
+		top: 14px;
+		left: calc(100% + 9px);
+		width: 107px;
+		height: 8px;
+		content: "";
+		position: absolute;
+		background: #fff;
+		opacity: 0.2;
+	}
+}
+
+.home__description {
+	margin: 27px 0 48px;
+	font-size: 24px;
+	font-weight: 300;
+	line-height: 26px;
+	color: #fff;
+}
+
+.button-container {
+	position: relative;
+}
+
+.home-button {
+	@extend .button;
+	margin: 0 auto 240px auto;
+}
+
+.home-button__title {
+	@extend .button__title;
+}
+
+.home-icon {
+	top: 13px;
+	position: absolute;
+	display: inline-block;
+	margin-left: 9px;
+	
+	&:after {
+		position: absolute;
+		content: "";
+		display: inline-block;
+		width: 73px;
+		height: 329px;
+		border: 1px dashed #fff;
+		border-radius: 0 30px 0 0 ;
+		opacity: 0.2;
+		border-left: none;
+		border-bottom: none;
+		top: 15px;
+    	left: 100%;
+	}
+}
+

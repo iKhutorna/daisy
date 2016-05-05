@@ -1,0 +1,116 @@
+@mixin media($width) {
+ 	@media screen and (max-width: $width + "px") {
+ 		@content;
+ 	}
+}
+
+.receive {
+	padding: 67px 0 15px;
+}
+
+.receive-container {
+	margin: 81px auto 51px;
+	max-width: 968px;
+}
+
+.receive-item {
+	width: 20.87%;
+	margin: 0 2.06%;
+	float: left;
+	cursor: pointer;
+}
+
+.receive-item__title {
+	margin-top: 22px;
+	display: block;
+	color: #868686;
+	font-size: 20px;
+	font-weight: 500;
+	line-height: 20px;
+	text-transform: uppercase;
+}
+
+.receive-item__underscore {
+	margin: 11px auto 22px;
+	width: 57px;
+	display: block;
+	border-bottom: 1px solid #adadad;
+}
+
+.receive-item__description {
+	display: block;
+	color: #adadad;
+	font-size: 15px;
+	font-weight: 300;
+	line-height: 18px;
+}
+
+.receive-hexagon {
+	margin: 0 auto;
+	position: relative;
+	width: 100px;
+	height: 116px;
+	background-color: #fe8682;
+	clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+	-webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+	
+	&:before {
+		content: '';
+		left: 5px;
+		top: 6px;
+		position: absolute;
+		width: 90px;
+		height: 104px;
+		background-color: #fc635e;
+		clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+		-webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+		transition: all 0.5s ease-in-out;
+	}
+
+	&:hover {
+		background-color: #fc635e;
+		
+		
+		.receive-hexagon__icon {
+			color: #fc635e;
+			transition: all 0.5s ease-in-out;
+		} 
+
+		&:before {
+			background-color: #fff;
+		}
+	}
+}
+
+.receive-hexagon__icon {
+	position: absolute;
+	color: #fff;
+}
+
+.fa-rocket {
+	top: 34px;
+	left: 26px;
+}
+
+.fa-desktop {
+	top: 38px;
+	left: 25px;
+} 
+
+.fa-paint-brush {
+	top: 30px;
+	left: 37px;
+}
+
+.fa-bullhorn {
+	top: 32px;
+	left: 28px;
+}
+
+.fa-bar-chart {
+	top: 32px;
+	left: 25px;
+}
+
+
+

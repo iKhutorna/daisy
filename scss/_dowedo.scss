@@ -1,0 +1,147 @@
+@mixin media($width) {
+ 	@media screen and (max-width: $width + "px") {
+ 		@content;
+ 	}
+}
+
+.dowedo__item:nth-child(1) {
+	padding: 60px 0 17px;
+
+	.title {
+		margin-bottom: 67px; 
+	}
+}
+
+.dowedo__item:nth-child(2) {
+	padding: 134px 0 17px
+}
+
+.dowedo__item:nth-child(3) {
+	padding: 123px 0 17px
+}
+
+.dowedo__item:nth-child(odd) {
+	background: #f2f2f2;
+}
+
+.dowedo-container:nth-child(1) {
+	margin: 0 auto 48px;
+	max-width: 982px
+}
+
+.dowedo-container:nth-child(2) {
+	margin: 0 auto 105px;
+	max-width: 982px
+}
+
+.dowedo-container:nth-child(3) {
+	margin: 0 auto 74px;
+	max-width: 982px
+}
+
+.dowedo__item:nth-child(odd) .dowedo-col {
+	margin: 0 21px;
+	float: left;
+}
+
+.dowedo__item:nth-child(3) .dowedo-col {
+	margin: 0 15px;
+}
+
+.dowedo__item:nth-child(even) .dowedo-col {
+	margin: 0 21px;
+	float: right;
+}
+
+.dowedo__item:nth-child(odd) .dowedo-col-text {
+	text-align: left;
+}
+
+.dowedo__item:nth-child(even) .dowedo-col-text {
+	text-align: right;
+}
+
+.dowedo-col-text {
+	max-width: 392px;
+
+	.button {
+		display: inline-block;
+		width: 167px;
+		background: #fc635e;
+		border: 2px solid #fc635e;
+		border-radius: 4px;
+		box-sizing: border-box;
+		text-align: center;
+		transition: all 0.5s ease-in-out;
+	
+	&:hover {
+		background: transparent;
+	}
+
+	&:hover .button__title {
+		color: #fc635e;
+		}
+	}
+
+	.button__title {
+		text-align: center;
+		line-height: 40px;
+		font-size: 20px;
+		font-weight: 300;
+		color: #f2f2f2;
+		transition: all 0.5s ease-in-out;
+	}
+}
+
+.dowedo-col__title {
+	margin: 30px 0 0;
+	padding: 0 20px;
+	position: relative;
+	line-height: 26px;
+	font-size: 28px;
+	font-weight: 500;
+	text-transform: uppercase;
+	color: #868686;
+}
+
+.dowedo__item:nth-child(odd) .dowedo-col__title {
+	
+	&:before {
+		content: '';
+		left: 0;
+		bottom: 0;
+		position: absolute;
+		width: 8px;
+		height: 32px;
+		border: 1px solid #fc635e;
+		background: #fc635e;
+		box-sizing: border-box;
+	}
+}
+
+.dowedo__item:nth-child(even) .dowedo-col__title {
+	
+	&:before {
+		content: '';
+		right: 0;
+		bottom: 0;
+		position: absolute;
+		width: 8px;
+		height: 32px;
+		border: 1px solid #fc635e;
+		background: #fc635e;
+		box-sizing: border-box;
+	}
+}
+
+.dowedo-col__description {
+	margin: 20px 0 40px;
+	font-weight: 300;
+	line-height: 24px;
+	font-size: 15px;
+	color: #9e9898;
+}
+
+
+
+
